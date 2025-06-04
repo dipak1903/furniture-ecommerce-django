@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="hero">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-lg-5">
+        <div class="intro-excerpt">
+          <h1>Catalog</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product Section -->
+<div class="container my-5">
+  <div class="untree_co-section product-section border rounded-4 px-4 py-5">
+    <div class="container my-5">
+        <ul class="nav justify-content-center flex-wrap" id="categoryTabs" role="tablist">
+          <li class="nav-item m-2"><a href="?category=All" class="nav-link custom-tab {% if selected_category == 'All' %}active{% endif %}">All</a></li>
+          <li class="nav-item m-2"><a href="?category=Chair" class="nav-link custom-tab {% if selected_category == 'Chair' %}active{% endif %}">Chair</a></li>
+          <li class="nav-item m-2"><a href="?category=Table" class="nav-link custom-tab {% if selected_category == 'Table' %}active{% endif %}">Tables</a></li>
+          <li class="nav-item m-2"><a href="?category=Cupboard" class="nav-link custom-tab {% if selected_category == 'Cupboard' %}active{% endif %}">Cupboards</a></li>
+          <li class="nav-item m-2"><a href="?category=Bench" class="nav-link custom-tab {% if selected_category == 'Bench' %}active{% endif %}">Benches</a></li>
+          <li class="nav-item m-2"><a href="?category=Bed" class="nav-link custom-tab {% if selected_category == 'Bed' %}active{% endif %}">Beds</a></li>
+        </ul>
+    </div> 
+    <div class="row">
+      {% for product in products %}
+      <div class="col-12 col-md-4 col-lg-3 mb-5">
+        <a class="product-item border p-3 rounded-3 d-block text-center" href="#">
+          <img src="{{ product.image.url }}" class="img-fluid product-thumbnail mb-2">
+          <h3 class="product-title">{{ product.name }}</h3>
+          <strong class="product-price">${{ product.price }}</strong>
+          <span class="icon-cross"><img src="{% static 'images/cross.svg' %}" class="img-fluid"></span>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

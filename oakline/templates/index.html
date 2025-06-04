@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="hero">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-5">
+				<div class="intro-excerpt">
+					<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
+					<p class="mb-4">Crafting Comfort, Defining Style — Discover Furniture That Feels Like Home.</p>
+					<p><a href="{% url 'catalog' %}" class="btn btn-secondary me-2">Shop Now</a><a href="{% url 'about_us' %}" class="btn btn-white-outline">About Us</a></p>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="hero-img-wrap">
+					<img src="{% static 'images/couch.png' %}" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="product-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+				<h2 class="mb-4 section-title">Premium furniture built to inspire your space.</h2>
+				<p class="mb-4">Experience the perfect balance of design, comfort, and quality with our handpicked collection of furniture essentials.</p>
+				<p><a href="{% url 'catalog' %}" class="btn">Explore Collection</a></p>
+			</div> 
+			
+			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<a class="product-item" href="#">
+					<img src="{% static 'images/product-1.png' %}" class="img-fluid product-thumbnail">
+					<h3 class="product-title">Nordic Chair</h3>
+					<strong class="product-price">$50.00</strong>
+					<span class="icon-cross">
+						<img src="{% static 'images/cross.svg' %}" class="img-fluid">
+					</span>
+				</a>
+			</div> 
+
+			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<a class="product-item" href="#">
+					<img src="{% static 'images/product-2.png' %}" class="img-fluid product-thumbnail">
+					<h3 class="product-title">Kruzo Aero Chair</h3>
+					<strong class="product-price">$78.00</strong>
+					<span class="icon-cross">
+						<img src="{% static 'images/cross.svg' %}" class="img-fluid">
+					</span>
+				</a>
+			</div>
+
+			<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+				<a class="product-item" href="#">
+					<img src="{% static 'images/product-3.png' %}" class="img-fluid product-thumbnail">
+					<h3 class="product-title">Ergonomic Chair</h3>
+					<strong class="product-price">$43.00</strong>
+					<span class="icon-cross">
+						<img src="{% static 'images/cross.svg' %}" class="img-fluid">
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="why-choose-section">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-6">
+				<h2 class="section-title">Why Choose Oakline</h2>
+				<p>At Oakline, we blend timeless design with modern comfort, ensuring every piece transforms your space into a sanctuary.</p>
+
+				<div class="row my-5">
+					<div class="col-6 col-md-6">
+						<div class="feature">
+							<div class="icon">
+								<img src="{% static 'images/truck.svg' %}" alt="Fast Shipping" class="img-fluid">
+							</div>
+							<h3>Fast &amp; Free Shipping</h3>
+							<p>Get your furniture delivered swiftly at no extra cost, right to your doorstep.</p>
+						</div>
+					</div>
+
+					<div class="col-6 col-md-6">
+						<div class="feature">
+							<div class="icon">
+								<img src="{% static 'images/bag.svg' %}" alt="Easy Shopping" class="img-fluid">
+							</div>
+							<h3>Easy to Shop</h3>
+							<p>Enjoy a seamless and intuitive shopping experience with curated collections.</p>
+						</div>
+					</div>
+
+					<div class="col-6 col-md-6">
+						<div class="feature">
+							<div class="icon">
+								<img src="{% static 'images/support.svg' %}" alt="24/7 Support" class="img-fluid">
+							</div>
+							<h3>24/7 Support</h3>
+							<p>Our dedicated support team is always here to help, anytime you need us.</p>
+						</div>
+					</div>
+
+					<div class="col-6 col-md-6">
+						<div class="feature">
+							<div class="icon">
+								<img src="{% static 'images/return.svg' %}" alt="Easy Returns" class="img-fluid">
+							</div>
+							<h3>Hassle-Free Returns</h3>
+							<p>Changed your mind? Enjoy stress-free returns within our flexible return policy.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-5">
+				<div class="img-wrap">
+					<img src="{% static 'images/why-choose-us-img.jpg' %}" alt="Why Choose Us" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="we-help-section">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-7 mb-5 mb-lg-0">
+				<div class="imgs-grid">
+					<div class="grid grid-1"><img src="{% static 'images/img-grid-1.jpg' %}" alt="Interior Design 1"></div>
+					<div class="grid grid-2"><img src="{% static 'images/img-grid-2.jpg' %}" alt="Interior Design 2"></div>
+					<div class="grid grid-3"><img src="{% static 'images/img-grid-3.jpg' %}" alt="Interior Design 3"></div>
+				</div>
+			</div>
+			<div class="col-lg-5 ps-lg-5">
+				<h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
+				<p>Discover contemporary solutions for every space. We craft stylish, functional interiors tailored to your lifestyle and personality.</p>
+				<ul class="list-unstyled custom-list my-4">
+					<li>Personalized interior design services</li>
+					<li>Modern, ergonomic, and sustainable furniture</li>
+					<li>Expert team with years of experience</li>
+					<li>On-time and on-budget delivery</li>
+				</ul>
+				<p><a href="{% url 'catalog' %}" class="btn">Explore</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popular-product">
+	<div class="container">
+		<div class="row">
+			{% for product in products %}
+			<div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+				<div class="product-item-sm d-flex">
+					<div class="thumbnail">
+						<img src="{% static product.image %}" alt="{{ product.title }}" class="img-fluid">
+					</div>
+					<div class="pt-3">
+						<h3>{{ product.title }}</h3>
+						<p>{{ product.description|truncatewords:15 }}</p>
+						<p><a href="{% url 'product_detail' product.slug %}">Read More</a></p>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock content %}
+		

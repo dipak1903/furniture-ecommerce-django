@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="{% static 'css/tiny-slider.css' %}" rel="stylesheet">
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<title>Oakline - The ultimate furniture</title>
+	</head>
+	<body>
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center shadow-sm rounded-3 overflow-hidden">
+          <div class="col-md-6 bg-white p-5">
+            <h3 class="mb-4 text-center">Create an Account</h3>
+            <form method="post">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" name="first_name" class="form-control" required value="{{ form.first_name.value|default:'' }}">
+                {{ form.first_name.errors }}
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" name="last_name" class="form-control" required value="{{ form.last_name.value|default:'' }}">
+                {{ form.last_name.errors }}
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required value="{{ form.email.value|default:'' }}">
+                {{ form.email.errors }}
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" required value="{{ form.username.value|default:'' }}">
+                {{ form.username.errors }}
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password1" class="form-control" required>
+                {{ form.password1.errors }}
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" name="password2" class="form-control" required>
+                {{ form.password2.errors }}
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+            </form>
+
+            <p class="text-center mt-3">Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+          </div>
+          <div class="col-md-6 d-none d-md-block p-0">
+            <img src="{% static 'images/sofa.png' %}" class="img-fluid h-100 w-100 object-fit-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
